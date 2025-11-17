@@ -1,0 +1,1832 @@
+
+<!doctype html>
+<html lang="el" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Embed a highly customizable web calendar into your website using ICal source links">
+      
+      
+      
+        <link rel="canonical" href="https://open-web-calendar.quelltext.eu/el/host/configure/index.md.canonical">
+      
+      
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="Ροές Δεδομένων RSS" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="Ροές Δεδομένων RSS. Τελευταία νέα" href="../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../assets/img/logo/owc.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Server Configuration - Open Web Calendar</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M11%209h2V7h-2m1%2013c-4.41%200-8-3.59-8-8s3.59-8%208-8%208%203.59%208%208-3.59%208-8%208m0-18A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202m-1%2015h2v-6h-2z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Server Configuration - Open Web Calendar" >
+      
+        <meta  property="og:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
+      
+        <meta  property="og:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_aivl1os7/el/host/configure/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://open-web-calendar.quelltext.eu/el/host/configure/index.md.canonical" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Server Configuration - Open Web Calendar" >
+      
+        <meta  name="twitter:description"  content="Embed a highly customizable web calendar into your website using ICal source links" >
+      
+        <meta  name="twitter:image"  content="/home/runner/work/open-web-calendar/open-web-calendar/.tox/docs/tmp/mkdocs_mdpo_aivl1os7/el/host/configure/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="yellow">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#server-configuration" class="md-skip">
+          Μετάβαση στο περιεχόμενο
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Κεφαλίδα">
+    <a href="../../../nl/" title="Open Web Calendar" class="md-header__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
+      
+  <img src="../../../assets/img/logo/owc.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Open Web Calendar
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Server Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Επιλογή γλώσσας">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../cs" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../de" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../.." hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../es" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../eo" hreflang="eo" class="md-select__link">
+              Esperanto
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../hr" hreflang="hr" class="md-select__link">
+              Hrvatski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../it" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../is" hreflang="is" class="md-select__link">
+              Íslenska
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../nl" hreflang="nl" class="md-select__link">
+              Nederlands
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../sk" hreflang="sk" class="md-select__link">
+              Slovenčina
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../fi" hreflang="fi" class="md-select__link">
+              Suomi
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../kab" hreflang="kab" class="md-select__link">
+              Taqbaylit
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../uk" hreflang="uk" class="md-select__link">
+              Українська
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ta" hreflang="ta" class="md-select__link">
+              ஆங்கிலம்
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../th" hreflang="th" class="md-select__link">
+              อังกฤษ
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ko" hreflang="ko" class="md-select__link">
+              한국어
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../nb_NO" hreflang="nb_NO" class="md-select__link">
+              Norsk bokmål
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ru" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ar" hreflang="ar" class="md-select__link">
+              العربية
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../be" hreflang="be" class="md-select__link">
+              Беларуская
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ca" hreflang="ca" class="md-select__link">
+              Català
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../cy" hreflang="cy" class="md-select__link">
+              Cymraeg
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../da" hreflang="da" class="md-select__link">
+              Dansk
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../.." hreflang="el" class="md-select__link">
+              Ελληνικά
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../fr" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../he" hreflang="he" class="md-select__link">
+              אנגלית
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../hu" hreflang="hu" class="md-select__link">
+              Magyar
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../id" hreflang="id" class="md-select__link">
+              Bahasa Indonesia
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ja" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../pl" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../pt" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../ro" hreflang="ro" class="md-select__link">
+              română
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../si" hreflang="si" class="md-select__link">
+              සිංහල
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../sv" hreflang="sv" class="md-select__link">
+              Svenska
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../tr" hreflang="tr" class="md-select__link">
+              Türkçe
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../zh_Hans" hreflang="zh_Hans" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://hosted.weblate.org/engage/open-web-calendar/" hreflang="en" class="md-select__link">
+              Translate
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/niccokunzmann/open-web-calendar/" title="Μετάβαση στο αποθετήριο" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    niccokunzmann/open-web-calendar
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Πλοήγηση" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../nl/" title="Open Web Calendar" class="md-nav__button md-logo" aria-label="Open Web Calendar" data-md-component="logo">
+      
+  <img src="../../../assets/img/logo/owc.svg" alt="logo">
+
+    </a>
+    Open Web Calendar
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/niccokunzmann/open-web-calendar/" title="Μετάβαση στο αποθετήριο" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    niccokunzmann/open-web-calendar
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pas weergave aan van uw eigen online calendar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Showcase
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Showcase
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../showcase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Showcase
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../showcase/events-high-screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Events on a Vertical Screen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../showcase/agenda-info-screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agenda info screen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../showcase/self-host-gancio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Self-Hosting and Gancio Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fr/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribuer ♥️
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    News
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            News
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/social-media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Social Media News
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/2025-03-17-caldav-nextcloud-sign-up/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducing CalDAV and Signing up to Events with Nextcloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/2024-04-10-website/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    New Website & Funding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hosting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Hosting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fr/host/hosted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Version hébergée
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nl/host/self/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zelf hosten en deployen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hosting with Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pypi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Package
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nl/host/configure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Serverconfiguratie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Move Your Calendars to Another Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Development
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/translate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Translate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup & Tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/javascript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JavaScript Customization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/maintain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notes for Maintainers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License Information
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SECURITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versions and Changes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../is/host/privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Meðferð persónuupplýsinga
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dunno/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Good to Know
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Πίνακας περιεχομένων">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Πίνακας περιεχομένων
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-default-calendar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the Default Calendar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring the Default Calendar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    <span class="md-ellipsis">
+      title
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    <span class="md-ellipsis">
+      language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#favicon" class="md-nav__link">
+    <span class="md-ellipsis">
+      favicon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source_code" class="md-nav__link">
+    <span class="md-ellipsis">
+      source_code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      contributing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privacy_policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      privacy_policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the Server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring the Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allowed_hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALLOWED_HOSTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app_debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      APP_DEBUG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      CACHE_DIRECTORY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_file_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      CACHE_FILE_SIZE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      CACHE_SIZE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_requested_urls_for_seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      CACHE_REQUESTED_URLS_FOR_SECONDS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owc_encryption_keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      OWC_ENCRYPTION_KEYS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owc_specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      OWC_SPECIFICATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port" class="md-nav__link">
+    <span class="md-ellipsis">
+      PORT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      WORKERS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssrf-protection-with-a-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSRF Protection with a Proxy Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#squid-as-a-proxy-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Squid as a Proxy Server
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/niccokunzmann/open-web-calendar/blob/master/translations/el/LC_MESSAGES/host/configure.md.po" title="Επεξεργασία αυτής της σελίδας" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="server-configuration">Server Configuration<a class="headerlink" href="#server-configuration" title="Permanent link">&para;</a></h1>
+<p>If you want to change the Open Web Calendar to serve your needs, this is well possible. You can choose to</p>
+<ul>
+<li>Change how the default calendar looks.</li>
+<li>Change how the server works.</li>
+</ul>
+<h2 id="configuring-the-default-calendar">Configuring the Default Calendar<a class="headerlink" href="#configuring-the-default-calendar" title="Permanent link">&para;</a></h2>
+<p>The configuration of all calendars is rooted in the <a href="/assets/default_specification.yml">default_specification</a>. All those values can be changed through a copy of this file hosted on the web through the calendar parameter <code>specification_url</code>. Each parameter should be documented in <a href="/assets/default_specification.yml">default_specification</a>.</p>
+<p>To modify <strong>all calendars</strong> hosted on your instance, use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable. Calendars still override some values for their configuration. Those which they do not override are affected by the default specification. Not all values are exposed to the configuration page to be changed. Those values can still be changed in the <code>specification_url</code> and the query parameters.</p>
+<p>You might want to change the following values.</p>
+<h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Permanent link">&para;</a></h3>
+<p>The title of your website.</p>
+<h3 id="language"><code>language</code><a class="headerlink" href="#language" title="Permanent link">&para;</a></h3>
+<p>This is the default language. You might want to change this to serve the configuration page better to a local audience.</p>
+<h3 id="favicon"><code>favicon</code><a class="headerlink" href="#favicon" title="Permanent link">&para;</a></h3>
+<p>This is a link to the website icon.</p>
+<h3 id="source_code"><code>source_code</code><a class="headerlink" href="#source_code" title="Permanent link">&para;</a></h3>
+<p>If you made changes, you are legally required to disclose them to visitors. Please adjust the link or contribute them back to the main project.</p>
+<h3 id="contributing"><code>contributing</code><a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h3>
+<p>If you want to redirect to contribute to your project.</p>
+<h3 id="privacy_policy"><code>privacy_policy</code><a class="headerlink" href="#privacy_policy" title="Permanent link">&para;</a></h3>
+<p>If you host this service yourself, you can use the default <a href="../privacy-policy">privacy policy</a>.</p>
+<p>If for some reason you decide to collect data i.e. in the HTTPS proxy or log IP-addresses, then you need to create your own privacy policy. You can link to the one of this project.</p>
+<h3 id="more-values">More Values<a class="headerlink" href="#more-values" title="Permanent link">&para;</a></h3>
+<p>There are loads more values that can be changed. Please refer to the <a href="/assets/default_specification.yml">default_specification</a>. These values are all documented. Please use the <a href="#owc_specification">OWC_SPECIFICATION</a> environment variable to change them.</p>
+<p>See also:</p>
+<ul>
+<li><a href="../../dev/api">API</a></li>
+</ul>
+<h2 id="configuring-the-server">Configuring the Server<a class="headerlink" href="#configuring-the-server" title="Permanent link">&para;</a></h2>
+<p>Environment variables only influence the running of the server. These environment variables can be used to configure the service:</p>
+<h3 id="allowed_hosts">ALLOWED_HOSTS<a class="headerlink" href="#allowed_hosts" title="Permanent link">&para;</a></h3>
+<p>default empty</p>
+<p>The clients divided by comma that are allowed to access the Open Web Calendar. You will see this text if you try to access the service and you are not allowed:</p>
+<blockquote>
+<p><strong>Forbidden:</strong> You don&rsquo;t have the permission to access the requested resource. It is either read-protected or not readable by the server.*</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>permit only the same computer: <code>ALLOWED_HOSTS=localhost</code></li>
+<li>permit several hosts: <code>ALLOWED_HOSTS=192.168.0.1,192.168.2,api.myserver.com</code></li>
+<li>permit everyone to access the server (default): <code>ALLOWED_HOSTS=</code> or <code>ALLOWED_HOSTS=*</code></li>
+</ul>
+<p>This functionality is provided by <a href="https://pypi.org/project/flask-allowed-hosts/">flask-allowed-hosts</a>.</p>
+<h3 id="app_debug">APP_DEBUG<a class="headerlink" href="#app_debug" title="Permanent link">&para;</a></h3>
+<p>default <code>false</code>, values <code>true</code> or <code>false</code>, always <code>false</code> in the Docker container</p>
+<p>Set the debug flag for the app.</p>
+<h3 id="cache_directory">CACHE_DIRECTORY<a class="headerlink" href="#cache_directory" title="Permanent link">&para;</a></h3>
+<p>default is a temporary directory (e.g. in <code>/tmp/</code>)</p>
+<p>The Open Web Calendar caches files needed to display calendars in this directory to speed up loading. If the directory does not exist, it will be created.</p>
+<h3 id="cache_file_size">CACHE_FILE_SIZE<a class="headerlink" href="#cache_file_size" title="Permanent link">&para;</a></h3>
+<p>default <code>20</code> (MB)</p>
+<p>This is the maximum size of one file in the cache. When the cache is full, the least recently used file is removed.</p>
+<p>Examples:</p>
+<ul>
+<li>Allow only small files of 4KB: <code>CACHE_FILE_SIZE=0.004</code></li>
+<li>Allow any size: <code>CACHE_FILE_SIZE="$CACHE_SIZE"</code></li>
+<li>Disable caching: <code>CACHE_FILE_SIZE=0</code></li>
+</ul>
+<h3 id="cache_size">CACHE_SIZE<a class="headerlink" href="#cache_size" title="Permanent link">&para;</a></h3>
+<p>default <code>200</code> (MB)</p>
+<p>This is the maximum cache size in megabytes. This size is limited to 200MB in order to mitigate the cache filling the file system or in case of <code>/tmp/</code> the RAM.</p>
+<p>Examples:</p>
+<ul>
+<li>Use 1 GB for caching: <code>CACHE_SIZE=1024</code></li>
+<li>Unlimited cache: <code>CACHE_SIZE=unlimited</code></li>
+<li>Disable caching: <code>CACHE_SIZE=0</code></li>
+</ul>
+<h3 id="cache_requested_urls_for_seconds">CACHE_REQUESTED_URLS_FOR_SECONDS<a class="headerlink" href="#cache_requested_urls_for_seconds" title="Permanent link">&para;</a></h3>
+<p>default <code>600</code> (seconds)</p>
+<p>Seconds to cache the calendar files that get downloaded to reduce bandwidth and delay.</p>
+<p>Examples:</p>
+<ul>
+<li>Refresh fast: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=10</code></li>
+<li>Disable caching: <code>CACHE_REQUESTED_URLS_FOR_SECONDS=0</code></li>
+</ul>
+<h3 id="owc_encryption_keys">OWC_ENCRYPTION_KEYS<a class="headerlink" href="#owc_encryption_keys" title="Permanent link">&para;</a></h3>
+<p>default empty</p>
+<p>This is a comma separated list of encryption keys. These can be used to hide sensitive information of URLs.</p>
+<p>Examples:</p>
+<ul>
+<li>Disable encryption (default): <code>OWC_ENCRYPTION_KEYS=</code></li>
+<li>Use one key: <code>OWC_ENCRYPTION_KEYS='Pj...48='</code></li>
+<li>Use multiple keys: <code>OWC_ENCRYPTION_KEYS='Pj...48=,cx...Fw='</code> If you use multiple keys, only the first one encrypts the data. The others are only used to decrypt the data.</li>
+</ul>
+<p>You can generate a new key by visiting your instance of the Open Web Calendar on the page <a href="https://open-web-calendar.hosted.quelltext.eu/new-key">/new-key</a> or by running this command:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>open_web_calendar.new_key
+</code></pre></div>
+<p>See also:</p>
+<ul>
+<li><a href="https://cryptography.io/en/latest/fernet/">Fernet</a></li>
+</ul>
+<h3 id="owc_specification">OWC_SPECIFICATION<a class="headerlink" href="#owc_specification" title="Permanent link">&para;</a></h3>
+<p><code>OWC_SPECIFICATION</code> is an optional environment variable.</p>
+<ul>
+<li>It can be a <strong>path</strong> to a file containing valid YAML or JSON.</li>
+<li>It can be a <strong>string</strong> containing valid YAML or JSON.</li>
+</ul>
+<p>Setting <code>OWC_SPECIFICATION</code> allows you to replace default values for all calendars.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>New versions of the Open Web Calendar can add new configuration parameters.
+Placing your changes in this variable instead of changing the <code>default_specification</code> file
+will ensure that you do not break the Open Web Calendar in a future version.</p>
+</div>
+<p>In following example, the title for all calendars that do not set their own title will be changed.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">OWC_SPECIFICATION</span><span class="o">=</span><span class="s1">&#39;{&quot;title&quot;: &quot;calendar&quot;}&#39;</span><span class="w"> </span>gunicorn<span class="w"> </span>open_web_calendar:app
+</code></pre></div>
+<p>See also:</p>
+<ul>
+<li><a href="../../dev/api#owc_specification">OWC_SPECIFICATION in the API</a></li>
+</ul>
+<h3 id="port">PORT<a class="headerlink" href="#port" title="Permanent link">&para;</a></h3>
+<p>default <code>5000</code>, default <code>80</code> in the Docker container</p>
+<p>The port that the service is running on.</p>
+<p>Examples:</p>
+<ul>
+<li>Serve on HTTP port: <code>PORT=80</code></li>
+</ul>
+<h3 id="workers">WORKERS<a class="headerlink" href="#workers" title="Permanent link">&para;</a></h3>
+<p>default <code>4</code>, only for the Docker container</p>
+<p>The number of parallel workers to handle requests.</p>
+<p>Examples:</p>
+<ul>
+<li>Only use one worker: <code>WORKERS=1</code></li>
+</ul>
+<h2 id="further-configuration">Further Configuration<a class="headerlink" href="#further-configuration" title="Permanent link">&para;</a></h2>
+<p>The Open Web Calendar uses libraries whose behavior can be further customized.</p>
+<ul>
+<li><strong>Flask</strong> has <strong><a href="https://flask.palletsprojects.com/en/3.0.x/config/">more environment variables</a></strong> available to configure how the application serves content.</li>
+<li><strong>Requests</strong> is used the get the <code>.ics</code> files. You can <a href="#ssrf-protection-with-a-proxy-server">configure a proxy</a>.</li>
+</ul>
+<p>The Open Web Calendar relies on proxy servers for these features:</p>
+<ul>
+<li><strong>Access Control and Users</strong> To restrict who can use the Open Web Calendar, you can use <code>nginx</code> or <code>apache</code> as a reverse proxy in front of it. YuNoHost is another self-hosting option to restrict access.</li>
+<li><strong>HTTPS Encryption</strong> This can be done by <code>nginx</code>, <code>apache</code> or <code>caddy</code>.</li>
+<li><strong>More Advanced Caching</strong> Basic caching is handeled by the Open Web Calendar. For more advanced cache configuration, use a proxy server like <code>squid</code>. Have a look in the documentation below on how to make the Open Web Calendar access the web only through a proxy.</li>
+<li><strong>Restricting Access to Calendars</strong> By default, the Open Web Calendar does not restrict which calendars to show. Use the proxy server to filter the calendars. If you run the Open Web Calendar behind a firewall with other web services, setting up a proxy is necessary to protect from SSRF attacks.</li>
+</ul>
+<h2 id="ssrf-protection-with-a-proxy-server">SSRF Protection with a Proxy Server<a class="headerlink" href="#ssrf-protection-with-a-proxy-server" title="Permanent link">&para;</a></h2>
+<p>The Open Web Calendar can be used to access the local network behind a firewall, see <a href="https://github.com/niccokunzmann/open-web-calendar/issues/250">Issue 250</a>. This free access is intended to show calendars from everywhere. Since <code>requests</code> is used by the Open Web Calendar, it can use a proxy as described in the <a href="https://requests.readthedocs.io/en/latest/user/advanced/#proxies"><code>requests</code> documentation</a>. The proxy can then handle the filtering.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:3128&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://10.10.1.10:1080&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;socks5://10.10.1.10:3434&quot;</span>
+</code></pre></div>
+<p>See also:</p>
+<ul>
+<li><a href="../docker#preventing-ssrf-attacks-using-a-tor-proxy">Prevent SSRF using a Tor proxy</a></li>
+</ul>
+<h2 id="squid-as-a-proxy-server">Squid as a Proxy Server<a class="headerlink" href="#squid-as-a-proxy-server" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://www.squid-cache.org/">Squid</a> Proxy and Cache is flexible and configurable. You can use it in front of the Open Web Calendar to configure access and customize caching.</p>
+<div class="admonition note">
+<p class="admonition-title">Operating System</p>
+<p>Squid is avaiable for all major platforms.
+For the commands and paths of this tutorial, we assume you run Squid on Debain/Ubuntu.
+The commands might work on other systems, but that is not tested.</p>
+</div>
+<p>After you have installed the <a href="https://www.squid-cache.org/">Squid</a> Proxy, add this file into the <code>conf.d</code> directory. Squid will load it automatically then.</p>
+<p>In Linux, create <code>/etc/squid/conf.d/open-web-calendar.conf</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">## Example rule to deny access to your local networks.</span>
+<span class="c1">## Adapt to list your (internal) IP networks from where browsing</span>
+<span class="c1">## should be allowed</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">0</span>.0.0.1-0.255.255.255<span class="w">  </span><span class="c1"># RFC 1122 &quot;this&quot; network (LAN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">10</span>.0.0.0/8<span class="w">             </span><span class="c1"># RFC 1918 local private network (LAN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">100</span>.64.0.0/10<span class="w">          </span><span class="c1"># RFC 6598 shared address space (CGN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">169</span>.254.0.0/16<span class="w">         </span><span class="c1"># RFC 3927 link-local (directly plugged) machines</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">172</span>.16.0.0/12<span class="w">          </span><span class="c1"># RFC 1918 local private network (LAN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span><span class="m">192</span>.168.0.0/16<span class="w">         </span><span class="c1"># RFC 1918 local private network (LAN)</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span>fc00::/7<span class="w">               </span><span class="c1"># RFC 4193 local private network range</span>
+acl<span class="w"> </span>owc_forbidden<span class="w"> </span>dst<span class="w"> </span>fe80::/10<span class="w">              </span><span class="c1"># RFC 4291 link-local (directly plugged) machines</span>
+
+<span class="c1">## If the Open Web Calendar runs on another machine, not localhost (127.0.0.1),</span>
+<span class="c1">## fill in the network or IP of that machine here and allow access from it.</span>
+acl<span class="w"> </span>owc_host<span class="w"> </span>src<span class="w"> </span><span class="m">127</span>.0.0.1<span class="w">           </span><span class="c1"># Allow Access to Squid from localhost (default)</span>
+<span class="c1"># acl owc_host src 172.16.0.0/12     # Uncomment if you run the Open Web Calendar as a docker service</span>
+
+<span class="c1">## Access from owc_host is allowed to all but forbidden networks</span>
+http_access<span class="w"> </span>allow<span class="w"> </span>owc_host<span class="w"> </span>!owc_forbidden
+
+<span class="c1">## Use IPv4 for DNS</span>
+<span class="c1">## See https://superuser.com/a/1443889</span>
+dns_v4_first<span class="w"> </span>on
+</code></pre></div>
+<p>The list above denies the Open Web Calendar access to all known local/internal networks. If you have your own local network (IPv4 or IPv6), add it to the list above to be sure.</p>
+<p>On Linux, you can install the file with this command:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>/etc/squid/conf.d/open-web-calendar.conf<span class="w"> </span>https://raw.githubusercontent.com/niccokunzmann/open-web-calendar/master/docs/snippets/squid/open-web-calendar.conf
+</code></pre></div>
+<p>Then, restart the squid proxy.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>service<span class="w"> </span>squid<span class="w"> </span>reload
+</code></pre></div>
+<p>Set the environment variables to tell the Open Web Calendar to use the Squid proxy installed on <code>localhost</code>. Setting this variable changes depending on how you run the Open Web Calendar.</p>
+<p>If you use the <a href="../pypi">Python Setup</a>, you can set the environment variables for the server like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="s2">&quot;http://localhost:3128&quot;</span>
+gunicorn<span class="w"> </span>open_web_calendar:app
+</code></pre></div>
+<p>When you try to access a forbidden calendar with the local <code>open-web-calendar</code>, e.q. <code>http://172.16.0.1/calendar.ics</code>, you will see this error message:</p>
+<blockquote>
+<p>403 Client Error: Forbidden for url: http://172.16.0.1/calendar.ics</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+<!--
+SPDX-FileCopyrightText: 2024 Nicco Kunzmann and Open Web Calendar Contributors <https://open-web-calendar.quelltext.eu/>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+
+
+from https://giscus.app/
+See also:
+- https://zhauniarovich.com/post/2021/2021-06-giscus/
+
+The `title` parameter defines the match of the category for discussion.
+
+-->
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <span xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://open-web-calendar.quelltext.eu/">Open Web Calendar Documentation</a> by <span property="cc:attributionName">Nicco Kunzmann and Open Web Calendar Contributors</span><br/> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></span> 
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://open-web-calendar.hosted.quelltext.eu" target="_blank" rel="noopener" title="open-web-calendar.hosted.quelltext.eu" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/niccokunzmann/open-web-calendar/" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://hosted.weblate.org/engage/open-web-calendar/" target="_blank" rel="noopener" title="Weblate" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M160 0c17.7 0 32 14.3 32 32v32h128c17.7 0 32 14.3 32 32s-14.3 32-32 32h-9.6l-8.4 23.1c-16.4 45.2-41.1 86.5-72.2 122 14.2 8.8 29 16.6 44.4 23.5l50.4 22.4 62.2-140c5.1-11.6 16.6-19 29.2-19s24.1 7.4 29.2 19l128 288c7.2 16.2-.1 35.1-16.2 42.2s-35.1-.1-42.2-16.2l-20-45H337.3l-20 45c-7.2 16.2-26.1 23.4-42.2 16.2s-23.4-26.1-16.2-42.2l39.8-89.5-50.4-22.4c-23-10.2-45-22.4-65.8-36.4-21.3 17.2-44.6 32.2-69.5 44.7l-34.7 17.2c-15.8 7.9-35 1.5-42.9-14.3s-1.5-35 14.3-42.9l34.5-17.3c16.3-8.2 31.8-17.7 46.4-28.3-13.8-12.7-26.8-26.4-38.9-40.9l-10.1-12.2c-11.3-13.6-9.5-33.8 4.1-45.1s33.8-9.5 45.1 4.1l10.2 12.2c11.5 13.9 24.1 26.8 37.4 38.7 27.5-30.4 49.2-66.1 63.5-105.4l.5-1.2H32.1C14.3 128 0 113.7 0 96s14.3-32 32-32h96V32c0-17.7 14.3-32 32-32m256 270.8L365.7 384h100.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://pypi.org/project/open-web-calendar/" target="_blank" rel="noopener" title="PyPI" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 444.7a20.4 20.4 0 1 1 0-40.7 20.4 20.4 0 1 1 0 40.7M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.6-183.4a20.4 20.4 0 1 1 0 40.8 20.4 20.4 0 1 1 0-40.8"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://hub.docker.com/r/niccokunzmann/open-web-calendar" target="_blank" rel="noopener" title="Docker" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+    
+    
+      
+    
+    
+    
+    <a href="https://toot.wales/tags/OpenWebCalendar" target="_blank" rel="noopener me" title="Mastodon #OpenWebCalendar" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M433 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.6-28.4-290.5 0 0 0-63.7 28.5-63.7 125.7 0 115.7-6.6 259.4 105.6 289.1 40.5 10.7 75.3 13 103.3 11.4 50.8-2.8 79.3-18.1 79.3-18.1l-1.7-36.9s-36.3 11.4-77.1 10.1c-40.4-1.4-83-4.4-89.6-54-.6-4.6-.9-9.3-.9-13.9 85.6 20.9 158.7 9.1 178.7 6.7 56.1-6.7 105-41.3 111.2-72.9 9.8-49.8 9-121.5 9-121.5zm-75.1 125.2h-46.6V190.1c0-49.7-64-51.6-64 6.9v62.5H201V197c0-58.5-64-56.6-64-6.9v114.2H90.3c0-122.1-5.2-147.9 18.4-175 25.9-28.9 79.8-30.8 103.8 6.1l11.6 19.5 11.6-19.5c24.1-37.1 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:niccokunzmann@rambler.ru" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "announce.dismiss", "navigation.footer", "content.action.edit", "navigation.instant", "toc.follow", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03ac\u03c6\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "clipboard.copy": "\u0391\u03bd\u03c4\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03c4\u03bf \u03c0\u03c1\u03cc\u03c7\u03b5\u03b9\u03c1\u03bf", "search.result.more.one": "1 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.more.other": "# \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1", "search.result.none": "\u03b4\u03b5\u03bd \u03b2\u03c1\u03ae\u03ba\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03bf \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf", "search.result.one": "1 \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03bf \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03b5\u03b9", "search.result.other": "# \u03ad\u03b3\u03b3\u03c1\u03b1\u03c6\u03b1 \u03c0\u03bf\u03c5 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd", "search.result.placeholder": "\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03c1\u03c7\u03af\u03c3\u03b5\u03b9 \u03b7 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7", "search.result.term.missing": "\u039b\u03b5\u03af\u03c0\u03b5\u03b9", "select.version": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae \u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u03c2"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
